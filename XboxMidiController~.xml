@@ -1,12 +1,52 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
    <PATCH nodename="D:\VVVV\XboxMidiController\XboxMidiController.v4p" systemname="XboxMidiController" filename="D:\VVVV\XboxMidiController\XboxMidiController.v4p">
-   <BOUNDS type="Window" left="14385" top="5190" width="9000" height="6000">
+   <BOUNDS type="Window" left="3825" top="3615" width="16860" height="10665">
    </BOUNDS>
    <NODE systemname="Xbox360Controller (Devices 1.0.0)" filename="Xbox360Controller.dll" nodename="Xbox360Controller (Devices 1.0.0)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1125" top="1125" width="100" height="100">
+   <BOUNDS type="Node" left="1125" top="1125" width="9780" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="1125" top="1125" width="3000" height="3000">
    </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   <PIN pinname="Refresh" visible="1">
+   </PIN>
+   <PIN pinname="Back" visible="1">
+   </PIN>
+   <PIN pinname="Start" visible="1">
+   </PIN>
+   <PIN pinname="D-Pad Right" visible="1">
+   </PIN>
+   <PIN pinname="D-Pad Left" visible="1">
+   </PIN>
+   <PIN pinname="D-Pad Down" visible="1">
+   </PIN>
+   <PIN pinname="D-Pad Up" visible="1">
+   </PIN>
+   <PIN pinname="Y Button" visible="1">
+   </PIN>
+   <PIN pinname="X Button" visible="1">
+   </PIN>
+   <PIN pinname="B Button" visible="1">
+   </PIN>
+   <PIN pinname="A Button" visible="1">
+   </PIN>
+   <PIN pinname="Right Shoulder Button" visible="1">
+   </PIN>
+   <PIN pinname="Right Trigger" visible="1">
+   </PIN>
+   <PIN pinname="Left Shoulder Button" visible="1">
+   </PIN>
+   <PIN pinname="Left Trigger" visible="1">
+   </PIN>
+   <PIN pinname="Right Thumbstick Pressed" visible="1">
+   </PIN>
+   <PIN pinname="Right ThumbstickXY" visible="1">
+   </PIN>
+   <PIN pinname="Left Thumbstick Pressed" visible="1">
+   </PIN>
+   <PIN pinname="Left ThumbstickXY" visible="1">
+   </PIN>
    </NODE>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -16,4 +56,354 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="1">
+   <BOUNDS type="Box" left="1155" top="600" width="2775" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1155" top="600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|XBOX 360 Controller Player One #0|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|XBOX 360 Controller Player One #0|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output Enum" dstnodeid="0" dstpinname="Device">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2">
+   <BOUNDS type="Box" left="13545" top="870" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13545" top="870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Refresh">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
+   <BOUNDS type="Box" left="4125" top="3585" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4125" top="3585" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Back">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Back" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="5880" top="3645" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5880" top="3645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Start">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Start" dstnodeid="4" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="2730" top="5265" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2730" top="5265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|D-Pad Right|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="D-Pad Right" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
+   <BOUNDS type="Box" left="1290" top="5310" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1290" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|D-Pad Left|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="D-Pad Left" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Box" left="1815" top="6360" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1815" top="6360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|D-Pad Down|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="D-Pad Down" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
+   <BOUNDS type="Box" left="1905" top="4500" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1905" top="4500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|D-Pad Up|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="D-Pad Up" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
+   <BOUNDS type="Box" left="11265" top="5085" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11265" top="5085" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Y Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Button" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
+   <BOUNDS type="Box" left="10620" top="5640" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10620" top="5640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|X Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="X Button" dstnodeid="10" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
+   <BOUNDS type="Box" left="12090" top="5670" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12090" top="5670" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|B Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="B Button" dstnodeid="11" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="11415" top="6555" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11415" top="6555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|A Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="A Button" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Box" left="10995" top="2565" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10995" top="2565" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Right Shoulder Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Right Shoulder Button" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14">
+   <BOUNDS type="Box" left="11190" top="3690" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11190" top="3690" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Right Trigger|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Right Trigger" dstnodeid="14" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15">
+   <BOUNDS type="Box" left="1710" top="2535" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1710" top="2535" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Left Shoulder Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Left Shoulder Button" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16">
+   <BOUNDS type="Box" left="1500" top="3555" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="3555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Left Trigger|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Left Trigger" dstnodeid="16" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Box" left="8535" top="6375" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8535" top="6375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Right Thumbstick Pressed|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Right Thumbstick Pressed" dstnodeid="17" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
+   <BOUNDS type="Box" left="5130" top="6390" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5130" top="6390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Left Thumbstick Pressed|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Left Thumbstick Pressed" dstnodeid="19" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
+   <BOUNDS type="Box" left="8760" top="7920" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8760" top="7920" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Right ThumbstickXY|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Right ThumbstickXY" dstnodeid="20" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21">
+   <BOUNDS type="Box" left="4920" top="7860" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4920" top="7860" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Left ThumbstickXY|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Left ThumbstickXY" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
